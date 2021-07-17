@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<head>
+
+  <nav class="navbar">
+    <ul>
+    <li><a href="index.html" style="text-decoration: none;">Home</a></li>
+    <li><a href="#me" style="text-decoration: none;">About me</a></li>
+    <li><a href="#edu" style="text-decoration: none;">Resume</a></li>
+    <li><a href="#interests" style="text-decoration: none;">Interests</a></li>
+    <li><a href="#work" style="text-decoration: none;">Work</a></li>
+</ul>
+</nav>
+
+
+
+
+<style>
+
+
+.navbar{
+    color: green;
+    background-color: cyan;
+    font-size: 25px;
+
+
+}
+li :hover{
+    background-color: black;
+    color: white;
+}
+li {
+    display: inline-block;
+    cursor: pointer;
+   }
+ul{
+    background-color: cyan;
+    overflow: hidden;
+    padding: 15px;
+    text-decoration: none;
+}
+#work{
+  background-color: white;
+}
+
+li a{
+    padding: 5px 10px;
+}
+
+
+.col{
+    text-align: center;
+}
+.info{
+    box-sizing: border-box;
+    align-content: center;
+    width: 500px;
+    height: 500px;
+    font-size: 23px;
+    padding: 15px;
+
+    
+}
+.skills{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+}
+#edu{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    width: 50%;
+    height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Set a background color */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #006E51;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.container {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.container.left {
+  left: 0;
+}
+
+.container.right {
+  left: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid #006E51;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.container.right::after {
+  left: -8px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #006E51;
+  z-index: 1;
+}
+
+.container.right::before {
+  left: 8px;
+}
+
+.container .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #006E51;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.container.left .date {
+  right: -75px;
+}
+
+.container.right .date {
+  left: -75px;
+}
+
+.container .icon {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 9px 0;
+  top: calc(50% - 20px);
+  background: #F6D155;
+  border: 2px solid #006E51;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #006E51;
+  z-index: 1;
+}
+
+.container.left .icon {
+  right: 56px;
+}
+
+.container.right .icon {
+  left: 56px;
+}
+
+.container .content {
+  padding: 30px 90px 30px 30px;
+  background: #F6D155;
+  position: relative;
+  border-radius: 0 500px 500px 0;
+}
+
+.container.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+
+.container .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #006E51;
+}
+
+.container .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@media (max-width: 767.98px) {
+  .timeline::after {
+    left: 90px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+
+  .container.right {
+    left: 0%;
+  }
+
+  .container.left::after, 
+  .container.right::after {
+    left: 82px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    left: 100px;
+    border-color: transparent #006E51 transparent transparent;
+  }
+
+  .container.left .date,
+  .container.right .date {
+    right: auto;
+    left: 15px;
+  }
+
+  .container.left .icon,
+  .container.right .icon {
+    right: auto;
+    left: 146px;
+  }
+
+  .container.left .content,
+  .container.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
+}
+#wai{
+  width: 100%;
+  padding: 25px;
+  font-size: 1.35rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+#bb{
+  width: auto;
+  height: 330px;
+  padding: 20px;
+  font-size: 1.25rem;
+}
+#wd{
+  font-size: 1.25rem;
+  width: auto;
+  height: 330px;
+  padding: 20px;
+  
+}
+#img1{
+  padding: 20px;
+  border: 5px black solid;
+}
+#img2{
+  padding: 20px;
+  border: 5px black solid;
+  right: 0;
+}
+
+.image-list-small {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 100%;
+  padding: 0;
+  background-color: white;
+}
+
+.image-list-small li {
+  display: inline-block;
+  width: 400px;
+  margin: 0 12px 30px;
+}
+
+.image-list-small li > a {
+  display: block;
+  text-decoration: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  border: 4px solid #ffffff;
+  outline: 1px solid #d0d0d0;
+  box-shadow: 0 2px 1px #DDD;
+  transition: .25s;
+}
+.image-list-small li img{
+    width: 100%; /* To make the images responsive */
+    height: auto;
+}
+
+.image-list-small li > a:hover{
+    transform: scale(1.1);
+    transition: .25s;
+}
+
+.image-list-small .details {
+  margin-top: 13px;
+}
+
+
+
+</style>
+
+</head>
+<body>
+<div>
+    <div class="user-info">
+        <div>
+            <div class="col">
+                <img src="bps.jpg" width=400px height="400px">
+            </div>
+     <div class="info"> 
+         <center><h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" id="#about">Who am I</h2>     </center>
+            <aside id="wai" >Looking for an organization where I can enhance my knowledge and from my academic learning give my best to the organization.To join a renowned Institution to enhance my skills and knowledge and to work for the growth of the Institution.
+                Seeking for an entry level position in the teaching line to share my knowledge for the growth of the students as well as the organization.</aside>
+
+        <div class="skills" id="me">
+            <h2 style="text-align: left;padding:15px;" >My Skills</h2>
+            <a>Programming &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <progress value="70" max="100"></progress></a><br><br>
+            <a>Bug Bounty &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <progress value="50" max="100"></progress></a><br><br>
+            <a>HTML &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<progress value="85" max="100"></progress></a><br><br>
+            <a>CSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<progress value="65" max="100"></progress></a><br><br>
+            <a>JAVASCRIPT &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<progress value="45" max="100"></progress></a>
+        </div>
+         </div>   
+</div>
+<div id="edu"><h2 style="text-align: right;padding: 15px;">My Education</h2></div>
+<div class="timeline">
+  <div class="container left">
+    <div class="date">2018-22</div>
+    <i class="icon fa fa-home"></i>
+    <div class="content">
+      <h2>Engineering</h2>
+      <p>
+        <b>College</b>
+        -CMR College of Engineering and Technology
+        <br><b>Year</b>
+        -2018-present
+        <br><b>CGPA</b>
+        -8.55
+      </p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="date">&nbsp;2016-18</div>
+    <i class="icon fa fa-gift"></i>
+    <div class="content">
+      <h2>Intermediate</h2>
+      <p>
+        <b>College</b>
+        -Delta Junior College
+        <br><b>Year</b>
+        -2016-18
+        <br><b>Marks</b>
+        -938
+      </p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="date">2016</div>
+    <i class="icon fa fa-"></i>
+    <div class="content">
+      <h2>Schooling</h2>
+      <p>
+        <b>School</b>
+        -Sacred Heart Academy
+        <br><b>Year</b>
+        -2016
+        <br><b>Aggregate</b>
+        -9.5
+      </p>
+    </div>
+  </div>
+
+  
+  </div>
+  <div>
+    <br><br><br><br><br><br><br>
+    <center><h2 style="font-size: 40px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" id="interests">My Interests</h2></center>    
+    <strong style="text-align:left;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size: 1.5rem;padding: 30px;">Bug Bounty Hunting</strong>
+    <img src="bbb.png" width="350px" height="250px" style="float: right;">
+    <p id="bb">A bug bounty program is a deal offered by many websites, organizations and software developers by which individuals can receive recognition and compensation for reporting bugs, especially those pertaining to security exploits and vulnerabilities.
+      These programs allow the developers to discover and resolve bugs before the general public is aware of them, preventing incidents of widespread abuse. Bug bounty programs have been implemented by a large number of organizations, including Mozilla,Facebook,Yahoo!,Google,Reddit,Square,Microsoft,and the Internet bug bounty.</p>
+      <strong style="text-align:left;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size: 1.5rem;padding: 30px;">Web Development</strong>
+      <img src="code.png" width="350px" height="250px" style="float: right;">
+    <p id="wd">Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience.
+
+      Web developers, or ‘devs’, do this by using a variety of coding languages. The languages they use depends on the types of tasks they are preforming and the platforms on which they are working.
+      Web development skills are in high demand worldwide and well paid too – making development a great career option. It is one of the easiest accessible higher paid fields as you do not need a traditional university degree to become qualified.</p>
+
+
+  </div>
+  <div id="work" style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 25px;"><center><h2>My Work</h2></center>
+  
+  
+    <ul class="image-list-small">
+      <li>
+        <a href="#" style="background-image: url('code.png');"></a>
+        <div class="details">
+          <h3 class="image-author">Coding</h3>
+        </div>
+      </li>
+      <li>
+        <a href="#" style="background-image: url('coins.jpg');"></a>
+        <div class="details">
+          <h3 class="image-author">Numismatics</h3>
+        </div>
+      </li>
+      <li>
+        <a href="#" style="background-image: url('moon.jpg');"></a>
+        <div class="details">
+          <h3 class="image-author">Moon Photography</h3>
+        </div>
+      </li>
+      </ul>
+  
+  
+  
+  </div>
+  
+
+</div>
+  </div>
+
+
+</div>
+</div>
+</body>
+</html>
